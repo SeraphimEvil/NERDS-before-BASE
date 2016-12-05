@@ -1,8 +1,84 @@
+html,
+body {
+    min-width: 1440px;
+    min-height: 2476px;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    outline: 1px solid green;
+}
+
+/* Хедер */
+
+.main-header {
+    background-color: #eeeeee;
+    margin-bottom: 80px;
+}
+
+.header-navigation {
+    min-height: 115px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.logo {
+    width: 160px;
+    outline: 1px solid red;
+}
+
+.site-navigation {
+    width: 640px;
+    outline: 1px solid red;
+}
+
+.site-navigation-list {
+    list-style: none;
+}
+
+.site-navigation-item {
+    display: inline;
+    outline: 1px solid black;
+}
+
+.site-navigation-link {
+    padding-right: 50px;
+}
+
+.user-cart {
+    width: 160px;
+    text-align: right;
+    outline: 1px solid red;
+}
+
+.header-slider {
+    min-height: 420px;
+}
+
+
 /* Слайдер мать его за ногу */
 
 
 .header-slider {
-	position: relative;
+    position: relative;
 }
 
 .header-slider input[type=radio] {
@@ -10,8 +86,8 @@
 }
 
 .slider-inner {
-	visibility: hidden;
-	overflow: hidden;
+    visibility: hidden;
+    overflow: hidden;
 }
 
 .slider-slides {
@@ -20,7 +96,7 @@
 }
 
 .slider-slides div {
-	float: left;
+    float: left;
 }
 
 .slider-controls label {
@@ -39,7 +115,7 @@
 #btn-1:checked ~ .slider-controls label[for="btn-1"],
 #btn-2:checked ~ .slider-controls label[for="btn-2"],
 #btn-3:checked ~ .slider-controls label[for="btn-3"] {
-	background-color: black;
+    background-color: black;
 }
 
 #btn-1:checked ~ .slider-inner .slide-1 {
@@ -55,4 +131,99 @@
 #btn-3:checked ~ .slider-inner .slide-3 {
     visibility: visible;
     transform: translate(-200%);
+}
+
+
+/* Предложения */
+
+.features {
+    min-height: 430px;
+    display: flex;
+    border-bottom: 2px solid #eeeeee;
+    margin-bottom: 40px;
+}
+
+.features-item {
+    width: 300px;
+    min-height: 350px;
+    margin-right: 80px;
+}
+
+/* О нас */
+
+.about-us {
+    min-height: 525px;
+    border-bottom: 2px solid #eeeeee;
+    display: flex;
+    justify-content: space-between;
+}
+
+.right-blocks {
+    display: flex;
+}
+
+.block-item {
+    margin-right: 45px;
+}
+
+.block-item:last-child {
+    margin-right: 0px;
+}
+
+/* Спонсоры */
+
+.sponsors {
+    min-height: 180px;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 auto;
+    align-items: center;
+    border-bottom: 2px solid #eeeeee;
+    margin-bottom: 80px;
+}
+
+
+/* Контакты */
+
+.contacts {
+    position: relative;
+    /*margin-bottom: 65px;*/
+}
+
+.contacts .map {
+    margin-left: -110px;
+    position: relative;
+}
+
+.contacts .marker {
+    position: absolute;
+    top: 90px;
+    left: 710px;
+}
+
+.contacts .contact-block {
+    position: absolute;
+    top: 50px;
+    left: 00px;
+    padding: 50px;
+    background-color: #ffffff;
+}
+
+/* Футер */
+
+.main-footer {
+    padding: 70px 0px;
+}
+
+.main-footer .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-social {
+    width: 260px;    
+}
+
+.let-friend {
+    width: 900px;    
 }
