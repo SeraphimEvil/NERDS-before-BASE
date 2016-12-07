@@ -49,8 +49,8 @@ a {
 }
 
 .features-btn {
-    max-width: 160px;
-    padding: 19px 40px;
+    width: 160px;
+    padding: 19px 0px;
 }
 
 .fbt-1 {
@@ -80,7 +80,7 @@ a {
 .contact-btn {
     width: 220px;
     background-color: #fb565a;
-    padding: 18px 46px;
+    padding: 18px 0px;
 }
 
 .contact-btn:hover {
