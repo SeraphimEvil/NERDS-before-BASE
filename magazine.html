@@ -11,17 +11,22 @@
 	<header class="magazine-header">
 		<div class="container">
 			<div class="header-navigation">
-				<img class="logo" src="img/nerds-logo.png" alt="Логотип" width="160" height="65">
+				<div class="logo">
+					<a href="index.html">
+						<img class="logo-img" src="img/nerds-logo.png" alt="Логотип" width="160" height="65">
+					</a>
+				</div>
 				<nav class="site-navigation">
 					<ul class="site-navigation-list">
+
 						<li class="site-navigation-item">
-						<a class="site-navigation-link" href="index.html">Студия</a>
+						<a class="site-navigation-link" href="#">Студия</a>
 						</li>
 						<li class="site-navigation-item">
 						<a class="site-navigation-link" href="#">Клиенты</a>
 						</li>
 						<li class="site-navigation-item">
-						<a class="site-navigation-link" href="#">Магазин</a>
+						<span class="site-navigation-link active">Магазин</span>
 						</li>
 						<li class="site-navigation-item">
 						<a class="site-navigation-link" href="#">Контакты</a>
@@ -73,5 +78,27 @@
 			</div>
 		</div>
 	</footer>
+
+	<div class="modal-content">
+		<button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+		<h2 class="modal-content-title">Напишите нам</h2>
+		<form class="feedback-form" action="#" method="post">
+			<div class="modal-content-user-info">
+				<div class="modal-content-user-name">
+					<span>Ваше имя:</span><br>
+					<input class="icon-name" type="text" name="user-name" placeholder="Представьтесь, пожалуйста">
+				</div>
+				<div class="modal-content-user-mail">
+					<span>Ваш e-mail:</span><br>
+					<input class="icon-mail" type="e-mail" name="user-mail" placeholder="Для отправки ответа">
+				</div>
+			</div>
+			<div class="modal-content-user-message">
+				<span>Текст письма:</span><br>
+				<textarea name="user-text" placeholder="В свободной форме"></textarea>
+			</div>
+			<button class="btn modal-content-btn" type="submit">Отправить</button>
+		</form>
+	</div>
 </body>
 </html>
