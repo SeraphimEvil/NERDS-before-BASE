@@ -94,6 +94,38 @@ a {
     width: 260px;
 }
 
+.modal-content-btn {
+    background-color: #e74246;
+}
+
+.mag-btn {
+    width: 260px;
+    color: #000000;
+    padding: 17px 0px;
+    background-color: #eeeeee;
+    margin-bottom: 50px;
+    outline: none;
+}
+
+.mag-btn:hover,
+.mag-btn:active {
+    background-color: #dfdfdf;
+    outline: none;
+}
+
+.mag-prewiew-btn {
+    width: 200px;
+    background-color: #fb565a;
+    padding: 19px 0px;
+}
+
+.mag-prewiew-btn:hover {
+    background-color: #e74246;
+}
+
+
+
+
 
 
 /* Контейнер */ 
@@ -240,10 +272,6 @@ a {
     overflow: hidden; /* add */
 }
 
-.slider-img {
-    width: 760px;
-    height: 431px;
-}
 
 .slide {
     /*height: 431px;*/ /* del */
@@ -255,7 +283,7 @@ a {
     height: 431px; /* add */
 
     background-repeat: no-repeat; /* add */
-    background-position: 100% 10px; /* add */
+    background-position: 100% 0px; /* add */
 
     -webkit-transition: left 0.3s ease; /* add */
      -moz-transition: left 0.3s ease; /* add */
@@ -637,7 +665,468 @@ a {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Стили для страницы МАГАЗИН */
+
+.magazine-body {
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    color: #283136;
+    font-weight: 400;
+}
+
+
+.magazine-side-left {
+    width: 260px;
+    
+    min-height: 770px;
+}
+
+
+.magazine-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.magazine-content h2 {
+    font-size: 18px;
+    line-height: 30px;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 50px;
+    color: #000000;
+}
+
+.magazine-content h3 {
+    font-size: 18px;
+    line-height: 30px;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 25px;
+}
+
+
+
+/* Фильтр цены */
+
+.range-filter {
+    width: 260px;
+    margin-bottom: 60px;
+    font-size: 16px;
+    line-height: 22px;
+    text-transform: uppercase;
+}
+
+.range-controls {
+    position: relative;
+    height: 41px;
+    padding-top: 39px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-bottom: 15px;
+
+    background-color: #eeeeee;
+    border-radius: 5px;
+}
+
+.range-controls .scale {
+    height: 2px;
+    background-color: #d7dcde;
+}
+
+.range-controls .bar {
+    width: 70%;
+    height: 2px;
+    background-color: #00ca74;
+}
+
+.range-controls .toggle {
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    width: 4px;
+    height: 4px;
+    cursor: pointer;
+    border: 9px solid #ffffff;
+    border-radius: 50%;
+    background-color: #ababab;
+    box-shadow: 0 2px 1px 0 #cccdcd;
+}
+
+.range-controls .toggle-min {
+    left: 20px;
+}
+
+.range-controls .toggle-max {
+    left: 165px;
+}
+
+.price-controls {
+    font-size: 0;
+}
+
+.price-controls label {
+    font-size: 16px;
+    display: inline-block;
+    width: 50%;
+}
+
+.max-price {
+    text-align: right;
+}
+
+.price-controls input {
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 16px;
+
+    width: 60px;
+    margin-left: 10px;
+    padding: 8px 10px;
+
+    text-align: center;
+    color: #283136;
+
+    border: none;
+    border-radius: 5px;
+    background-color: #eeeeee;
+}
+
+
+
+/* Сетка  и и чекбоксы*/
+
+.checkbox-zone {
+    margin-bottom: 50px;
+}
+
+.checkbox-zone ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.checkbox-zone li {
+    margin-bottom: 23px;
+}
+
+.checkbox-zone label input[type="checkbox"] {
+    display: none;
+}
+
+
+.grid {
+    position: relative;
+
+    padding-left: 40px;
+
+    cursor: pointer;
+}
+
+.grid:hover {
+    color: #000000;
+}
+
+.grid input[type="checkbox"] + .checkbox-indicator {
+    position: absolute;
+    top: -5px;
+    left: 0;
+
+    border-radius: 50%;
+    height: 21px;
+    width: 21px;
+
+    border: 4px solid #b8b8b8;
+}
+
+.grid input[type="checkbox"]:checked + .checkbox-indicator::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 6px;
+
+    height: 9px;
+    width: 9px;
+    border-radius: 50%;
+
+    background-color: #b8b8b8;
+}
+
+
+
+
+
+/* Особенности и Чекбоксы */
+
+
+.mag-features {
+    position: relative;
+
+    padding-left: 40px;
+
+    cursor: pointer;
+}
+
+.mag-features:hover {
+    color: #000000;
+}
+
+.mag-features input[type="checkbox"] + .checkbox-indicator {
+    position: absolute;
+    top: -2px;
+    left: 0;
+
+    border-radius: 5px;
+    height: 21px;
+    width: 21px;
+
+    border: 3px solid #b8b8b8;
+}
+
+.mag-features input[type="checkbox"]:checked + .checkbox-indicator::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 6px;
+
+    height: 15px;
+    width: 6px;
+    border-radius: 5px;
+
+    background-color: #b8b8b8;
+}
+
+.mag-features input[type="checkbox"]:checked + .checkbox-indicator::after {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: 16px;
+
+    height: 23px;
+    width: 6px;
+    border-radius: 5px;
+
+    background-color: #b8b8b8;
+}
+
+.mag-features input[type="checkbox"]:checked + .checkbox-indicator::before {
+  transform: rotate(-45deg);
+}
+
+.mag-features input[type="checkbox"]:checked + .checkbox-indicator::after {
+  transform: rotate(45deg);
+}
+
+
+/* Правая сторона магазина (Сортировка) */
+
+.magazine-side-right {
+    /*outline: 1px solid red;*/
+    width: 760px;
+    
+}
+
+.mag-top-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.nav-sort-list {
+   /* background-color: green;*/
+
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    padding-right: 86px;
+}
+
+.nav-sort-item {
+    /*background-color: red;*/
+
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 30px;
+    padding-right: 25px;
+    text-transform: uppercase;
+}
+
+.nav-sort-item:nth-child(1) {
+    color: #000000;
+}
+
+.nav-sort-item:nth-child(2),
+.nav-sort-item:nth-child(3) {
+    color: #b2b2b2;
+}
+
+.nav-sort-item:hover {
+    color: #666666;
+    cursor: pointer;
+}
+
+.prewiew {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.prewiew-item {
+    position: relative;
+    overflow: hidden; /* идея в том, что бы всплывающее окно было всегда на месте и выходило при наведении на всю область */
+    margin-right: 40px;
+    margin-bottom: 40px;
+}
+
+.prewiew-item:nth-child(2n) {
+    margin-right: 0px;
+}
+
+.prewiew-item-block {
+    position: relative;
+    width: 360px;
+    height: 40px;
+    
+    background-color: #e9e9e9;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-bottom: 0;
+}
+
+.prewiew-item-block::before {
+    content: "";
+    position: absolute;
+    top: 13px;
+    left: 16px;
+
+    height: 14px;
+    width: 14px;
+
+    background-color: #ffffff;
+    border-radius: 50%;
+    box-shadow: 23px 0px #ffffff,
+                46px 0px #ffffff;
+}
+
+.prewiew-item-block:hover {
+    background-color: #4d4d4d;
+}
+
+.prewiew-item-img {
+    height: 576px;
+    width: 360px;
+}
+
+.prewiew-item-info {
+    /*visibility: hidden;*/
+
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
+
+    height: 230px;
+    width: 360px;
+
+    background-color: #eeeeee;
+    text-align: center;
+}
+
+/*.prewiew-item-info:hover {
+    visibility: visible;
+}*/
+
+.prewiew-item-info h2 {
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    margin-top: 35px;
+    margin-bottom: 20px;
+
+    font-size: 18px;
+    line-height: 30px;
+
+    font-weight: 700;
+    color: #000000;
+}
+
+.prewiew-item-info p {
+    display: inline-block;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+
+    margin-bottom: 20px;
+
+    color: #666666;
+}
+
+.prewiew-item-info a {
+    margin-bottom: 45px;
+}
+
+
+/* Кнопки страниц в правой колонке */
+
+.page-mag-selector {
+
+    margin-bottom: 60px;
+
+}
+
+
+.page-mag-num {
+    display: inline-block;
+    margin-right: 8px;
+
+    background-color: #eeeeee;
+
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
+
+    padding: 15px 20px;
+    border-radius: 5px;
+
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.active-num {
+
+    box-shadow: inset 3px 3px #eeeeee,
+                inset -3px -3px #eeeeee,
+                inset -3px 3px #eeeeee,
+                inset 3px -3px #eeeeee   ;
+    background-color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -774,4 +1263,3 @@ a {
 .modal-content-user-message textarea:focus {
     border-color: #000000;
 }
-
