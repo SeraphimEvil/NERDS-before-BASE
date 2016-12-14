@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+
 </head>
 <body class="magazine-body">
 	<header class="magazine-header">
@@ -145,6 +146,10 @@
 							<li class="nav-sort-item">по типу</li>
 							<li class="nav-sort-item">по названию</li>
 						</ul>
+						<!-- <div class="sort-direction">
+                            <a class="sort-dir icon-up-dir sort-dir-active" href="#">Вверх</a>
+                            <a class="sort-dir icon-down-dir" href="#">Вниз</a>
+                        </div> -->
 					</div>
 				</div>	
 
@@ -156,10 +161,13 @@
 							<img src="img/img-sedona.jpg" alt="Седона" width="360" height="576">
 
 						</div>
-						<div class="prewiew-item-info">
-							<h2>Sedona</h2>
-							<p>Информационный сайт <br> для туристов</p>
-							<a class="btn mag-prewiew-btn" href="#">9 900 руб.</a>
+						<div class="prewiew-item-show">
+							<div class="prewiew-item-block-darken"></div>
+							<div class="prewiew-item-info">
+								<h2>Sedona</h2>
+								<p>Информационный сайт <br> для туристов</p>
+								<a class="btn mag-prewiew-btn" href="#">9 900 руб.</a>
+							</div>
 						</div>
 					</article>
 
@@ -170,10 +178,13 @@
 							<img src="img/img-pink.jpg" alt="Пинк" width="360" height="576">
 
 						</div>
-						<div class="prewiew-item-info">
-							<h2>Pink app</h2>
-							<p>Продуктовый лендинг <br> приложения для iOS и Android</p>
-							<a class="btn mag-prewiew-btn" href="#">9 900 руб.</a>
+						<div class="prewiew-item-show">
+							<div class="prewiew-item-block-darken"></div>
+							<div class="prewiew-item-info">
+								<h2>Pink app</h2>
+								<p>Продуктовый лендинг <br> приложения для iOS и Android</p>
+								<a class="btn mag-prewiew-btn" href="#">9 900 руб.</a>
+							</div>
 						</div>
 					</article>
 
@@ -184,10 +195,13 @@
 							<img src="img/img-barbershop.jpg" alt="Барбершоп" width="360" height="576">
 							
 						</div>
-						<div class="prewiew-item-info">
-							<h2>Barbershop</h2>
-							<p>Сайт салоны красоты. <br> Для мужчин, да.</p>
-							<a class="btn mag-prewiew-btn" href="#">9 900 руб.</a>
+						<div class="prewiew-item-show">
+							<div class="prewiew-item-block-darken"></div>
+							<div class="prewiew-item-info">
+								<h2>Barbershop</h2>
+								<p>Сайт салоны красоты. <br> Для мужчин, да.</p>
+								<a class="btn mag-prewiew-btn" href="#">9 900 руб.</a>
+							</div>
 						</div>
 					</article>
 
@@ -198,10 +212,13 @@
 							<img src="img/img-mishka.jpg" alt="Мишка" width="360" height="576">
 
 						</div>
-						<div class="prewiew-item-info">
-							<h2>Mishka</h2>
-							<p>Интернет-магазин <br> вязаных игрушек</p>
-							<a class="btn mag-prewiew-btn" href="#">9 900 руб.</a>
+						<div class="prewiew-item-show">
+							<div class="prewiew-item-block-darken"></div>
+							<div class="prewiew-item-info">
+								<h2>Mishka</h2>
+								<p>Интернет-магазин <br> вязаных игрушек</p>
+								<a class="btn mag-prewiew-btn" href="#">9 900 руб.</a>
+							</div>
 						</div>
 					</article>
 
@@ -212,10 +229,13 @@
 							<img src="img/img-aplus.jpg" alt="А+" width="360" height="576">
 
 						</div>
-						<div class="prewiew-item-info">
-							<h2>A plus</h2>
-							<p>Лендинг курсов повышения <br> квалификации</p>
-							<a class="btn mag-prewiew-btn" href="#">9 900 руб.</a>
+						<div class="prewiew-item-show">
+							<div class="prewiew-item-block-darken"></div>
+							<div class="prewiew-item-info">
+								<h2>A plus</h2>
+								<p>Лендинг курсов повышения <br> квалификации</p>
+								<a class="btn mag-prewiew-btn" href="#">9 900 руб.</a>
+							</div>
 						</div>
 					</article>
 
@@ -226,10 +246,13 @@
 							<img src="img/img-kvast.jpg" alt="Кваст" width="360" height="576">
 
 						</div>
-						<div class="prewiew-item-info">
-							<h2>Кваст</h2>
-							<p>Промо-сайт производителя <br> крафтового кваса</p>
-							<a class="btn mag-prewiew-btn" href="#">9 900 руб.</a>
+						<div class="prewiew-item-show">
+							<div class="prewiew-item-block-darken"></div>
+							<div class="prewiew-item-info">
+								<h2>Кваст</h2>
+								<p>Промо-сайт производителя <br> крафтового кваса</p>
+								<a class="btn mag-prewiew-btn" href="#">9 900 руб.</a>
+							</div>
 						</div>
 					</article>
 				</div>
@@ -293,5 +316,26 @@
 			<button class="btn modal-content-btn" type="submit">Отправить</button>
 		</form>
 	</div>
+
+	<script src="js/popup.js"></script>
+	<!-- <script>
+		var infoBlock = document.querySelectorAll(".prewiew-item");
+		var infoPlus = document.querySelector(".prewiew-item-info");
+		var blockDarken = document.querySelector(".prewiew-item-block");
+
+
+		infoBlock.addEventListener("mouseover", function(event) {
+			event.preventDefault();
+			infoPlus.classList.add("prewiew-item-info-show");
+			blockDarken.classList.add("prewiew-item-block-darken");
+		})
+
+		
+		infoBlock.addEventListener("mouseout", function(event) {
+			event.preventDefault();
+			infoPlus.classList.remove("prewiew-item-info-show");
+			blockDarken.classList.remove("prewiew-item-block-darken");
+		})		
+	</script> -->
 </body>
 </html>

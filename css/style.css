@@ -981,6 +981,11 @@ a {
     cursor: pointer;
 }
 
+
+
+/* изображения */
+
+
 .prewiew {
     display: flex;
     flex-wrap: wrap;
@@ -992,6 +997,7 @@ a {
     overflow: hidden; /* идея в том, что бы всплывающее окно было всегда на месте и выходило при наведении на всю область */
     margin-right: 40px;
     margin-bottom: 40px;
+    cursor: pointer;
 }
 
 .prewiew-item:nth-child(2n) {
@@ -1009,6 +1015,8 @@ a {
     margin-bottom: 0;
 }
 
+
+
 .prewiew-item-block::before {
     content: "";
     position: absolute;
@@ -1022,10 +1030,8 @@ a {
     border-radius: 50%;
     box-shadow: 23px 0px #ffffff,
                 46px 0px #ffffff;
-}
 
-.prewiew-item-block:hover {
-    background-color: #4d4d4d;
+    z-index: 200;
 }
 
 .prewiew-item-img {
@@ -1033,8 +1039,36 @@ a {
     width: 360px;
 }
 
+
+.prewiew-item-show {
+    opacity: 0;
+
+    position: absolute;
+    bottom: 0;
+    background-color: transparent;
+
+    height: 616px;
+    width: 360px;
+
+    z-index: 5;
+}
+
+.prewiew-item-show:hover {
+    opacity: 1;
+}
+
+.prewiew-item-block-darken {
+    position: absolute;
+    top: 0;
+    height: 40px;
+    width: 360px;
+    background-color: #4d4d4d;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
 .prewiew-item-info {
-    /*visibility: hidden;*/
+    opacity: 1;
 
     position: absolute;
     bottom: 0;
@@ -1048,7 +1082,17 @@ a {
 }
 
 /*.prewiew-item-info:hover {
-    visibility: visible;
+    opacity: 1;
+
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
+
+    height: 230px;
+    width: 360px;
+
+    background-color: #eeeeee;
+    text-align: center;
 }*/
 
 .prewiew-item-info h2 {
@@ -1081,6 +1125,16 @@ a {
 }
 
 
+
+
+
+
+
+
+
+
+
+
 /* Кнопки страниц в правой колонке */
 
 .page-mag-selector {
@@ -1107,12 +1161,20 @@ a {
     text-transform: uppercase;
 }
 
+.page-mag-num:hover {
+    background-color: #dfdfdf;
+}
+
 .active-num {
 
     box-shadow: inset 3px 3px #eeeeee,
                 inset -3px -3px #eeeeee,
                 inset -3px 3px #eeeeee,
                 inset 3px -3px #eeeeee   ;
+    background-color: #ffffff;
+}
+
+.active-num:hover {
     background-color: #ffffff;
 }
 
@@ -1134,12 +1196,40 @@ a {
 
 /* Всплывающая форма */
 
+@keyframes bounce {
+  0%   {
+    transform: translateX(-2000px);
+  }
+  70%  {
+    transform: translateX(30px);
+  }
+  90%  {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
+
 .modal-content {
     position: absolute;
     left: 50%;
     top: 1756px;
 
     display: none;
+
     width: 760px;
     margin-left: -480px;
     padding: 70px 100px;
@@ -1151,6 +1241,15 @@ a {
 
     background: #ffffff;
     box-shadow: 0px 20px 40px rgba(0, 1, 1, 0.75);
+}
+
+.modal-content-show {
+    display: block;
+    animation: bounce 0.6s;
+}
+
+.modal-error {
+    animation: shake 0.6s;
 }
 
 .modal-content-close {
