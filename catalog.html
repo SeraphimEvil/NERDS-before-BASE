@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Nёrds</title>
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
 
 </head>
@@ -46,7 +46,7 @@
 
 	<main class="container">
 		<div class="magazine-content">
-			<section class="magazine-side-left">
+			<form class="magazine-side-left">
 				<h2>Стоимость:</h2>
 
 				<div class="range-filter">
@@ -62,9 +62,53 @@
 						<label class="max-price"> до <input type="text" name="max-price" value="15 000"></label>
 					</div>
 				</div>
-
-				<h3>Сетка:</h3>
 				
+				<h3>Сетка:</h3>
+					
+<!-- 
+					<fieldset class="filter filter-supply">
+                            <h3 class="filter-title">Сетка:</h3>
+                            <input class="filter-supply-radio" id="radio-1" type="radio" name="radiogroup" value="battery" checked>
+                            <label class="filter-supply-item" for="radio-1">Адаптивная</label>
+                            <input class="filter-supply-radio" id="radio-2" type="radio" name="radiogroup" value="mains">
+                            <label class="filter-supply-item" for="radio-2">Фиксированная</label>
+                            <input class="filter-supply-radio" id="radio-3" type="radio" name="radiogroup" value="mains">
+                            <label class="filter-supply-item" for="radio-3">Резиновая</label>
+                        </fieldset> -->
+				<!-- <div class="radio-zone">
+					
+					<!-- <ul>
+						<li>
+							<label class="grid"> -->
+							<!-- <p>
+								<input type="radio" name="adapt" checked>
+								<span class="radio-indicator"></span>
+								Адаптивная
+							</p> -->
+							<!-- </label>
+						</li>
+						<li>
+							<label class="grid"> -->
+						<!-- 	<p>
+								<input type="radio" name="fixed">
+								<span class="radio-indicator"></span>
+								Фиксированная
+							</p> -->
+						<!-- 	</label>
+						</li>
+						<li>
+							<label class="grid"> -->
+							<!-- <p>
+								<input type="radio" name="rubber">
+								<span class="radio-indicator"></span>
+								Резиновая
+							</p> -->
+						<!-- 	</label>
+						</li>
+					</ul> -->
+					
+				<!-- </div> -->
+
 				<div class="checkbox-zone">
 					<ul>
 						<li>
@@ -134,7 +178,7 @@
 				</div>
 
 				<button class="btn mag-btn">Показать</button>
-			</section>
+			</form>
 
 				
 			<section class="magazine-side-right">
@@ -276,7 +320,7 @@
 				<b>Nёrds design studio</b>
 				<p>191186, Санкт-Петербург,<br>ул.Б.Конюшеная, д. 19/8</p>
 				<p>тел.+7 (812) 275-75-75</p>
-				<a href="#" class="btn contact-btn">Напишите нам</a>
+				<a href="feedback.html" class="btn contact-btn">Напишите нам</a>
 			</div>
 		</div>
 	</main>
