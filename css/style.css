@@ -559,7 +559,7 @@ a {
     top: 50px;
     left: 0px;
     width: 270px;
-    margin-left: 110px;
+    /*margin-left: 110px;*/
     padding: 50px 0px 50px 50px;
     background-color: #ffffff;
 }
